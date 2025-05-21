@@ -20,7 +20,6 @@ jobs:
         java-version: '17'
 
     - name: Build with Maven
-      run: mvn clean package
-
-    - name: Run Main class
-      run: java -cp target/classes me.tm.Main
+      run: |
+        mvn clean package
+        java -cp target/classes me.tm.Main
